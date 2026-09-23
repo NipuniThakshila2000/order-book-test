@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f5efe4;
+  --color-surface: #fbf7f0;
+  --color-surface-2: #f3ece1;
+  --color-fg: #2c261c;
+  --color-ivory: #2c261c;
+  --color-muted: #5c5346;
+  --color-subtle: #534c42;
+  --color-gold: #8a6a28;
+  --color-gold-soft: #c4a15a;
+  --color-gold-dim: #9a7a3a;
+  --color-border: #e0d5c4;
+  --color-border-strong: #c9b89a;
+  --font-display: "Cormorant Garamond", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "hlig" 0, "calt" 0;
+  }
+}
+
+.page-enter {
+  animation: rise 420ms ease-out;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.stagger-in {
+  animation: rise 560ms ease-out;
+}
+.seal-breathe {
+  animation: breathe 5.4s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .stagger-in,
+  .seal-breathe {
+    animation: none;
+  }
+  .dust span {
+    animation: none !important;
+  }
+}
+
+html.field-manual {
+  --color-surface: #f3ece1;
+}
+html.field-manual .book-illum,
+html.field-manual .mark-illum,
+html.field-manual .dust {
+  display: none !important;
+}
+html.field-manual .page-enter,
+html.field-manual .stagger-in,
+html.field-manual .seal-breathe {
+  animation: none;
+}
+html.field-manual main {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+html.field-manual .font-display {
+  letter-spacing: 0.02em;
+}
+html.field-manual header.site-chrome {
+  backdrop-filter: none;
+}
+html.field-manual .text-lg {
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+html.field-manual textarea {
+  min-height: 5rem;
+}
+
+@media print {
+
+  .site-chrome,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: #2c261c;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .book-illum {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .book-illum img {
+    max-height: 3.2in;
+    mix-blend-mode: multiply;
+  }
+  .print-cover {
+    break-after: page;
+    page-break-after: always;
+  }
+  .print-chapter {
+    break-before: page;
+    page-break-before: always;
+  }
+  .print-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .book-document {
+    box-shadow: none !important;
+    max-width: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+}
+
+@page {
+  size: letter;
+  margin: 0.7in 0.7in 0.8in;
+}
+
