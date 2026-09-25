@@ -70,7 +70,7 @@ export function Shell() {
         <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-6">
           <Link to="/" className="flex shrink-0 items-center gap-3">
             <img src="/images/crown.svg" alt="" className="size-8" />
-            <span className="font-display text-xl tracking-[0.28em] text-ivory">ORDER</span>
+            <span className="font-display text-xl tracking-[0.28em] text-order-orange">ORDER</span>
           </Link>
           <nav className="ml-auto hidden items-center gap-2 lg:flex">
             <NavLink to="/dashboard" label="Dashboard" active={pathname.startsWith("/dashboard")} />

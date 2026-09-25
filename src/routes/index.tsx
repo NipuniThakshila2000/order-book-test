@@ -95,7 +95,7 @@ function Home() {
               className="seal-breathe mx-auto h-14 w-14 object-contain md:h-20 md:w-20"
             />
             <p className="mt-2 text-xs tracking-[0.42em] text-gold uppercase">A living sanctuary</p>
-            <h1 className="mt-2 font-display text-5xl font-medium tracking-[0.18em] text-ivory md:text-7xl">
+            <h1 className="mt-2 font-display text-5xl font-medium tracking-[0.18em] text-order-orange md:text-7xl">
               ORDER
             </h1>
             <p className="mt-3 font-display text-xl leading-snug text-gold italic md:text-2xl">
