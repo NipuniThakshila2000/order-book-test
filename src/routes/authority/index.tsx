@@ -16,6 +16,12 @@ function AuthorityIndex() {
   return (
     <main className="relative min-h-[calc(100dvh-57px)] overflow-hidden">
       <Dust count={12} />
+      <img
+        src="/images/ornaments/keyhole.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute left-[-4rem] top-28 z-0 hidden w-48 -rotate-[10deg] opacity-[0.1] mix-blend-multiply md:block"
+      />
       <div className="page-enter relative mx-auto max-w-5xl px-5 py-12 md:py-16">
         <PageMark
           image="/images/mark-authority.jpg"

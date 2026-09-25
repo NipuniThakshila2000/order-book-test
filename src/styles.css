@@ -77,6 +77,7 @@ html.field-manual {
 }
 html.field-manual .book-illum,
 html.field-manual .mark-illum,
+html.field-manual .ornament,
 html.field-manual .dust {
   display: none !important;
 }
@@ -152,4 +153,3 @@ html.field-manual textarea {
   size: letter;
   margin: 0.7in 0.7in 0.8in;
 }
-

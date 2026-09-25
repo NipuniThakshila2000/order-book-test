@@ -21,6 +21,12 @@ function PathPage() {
   return (
     <main className="relative min-h-[calc(100dvh-57px)] overflow-hidden">
       <Dust count={18} />
+      <img
+        src="/images/ornaments/broken-tower.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute right-[-10rem] top-32 z-0 hidden w-[30rem] rotate-[5deg] opacity-[0.08] mix-blend-multiply lg:block"
+      />
       <div className="page-enter relative mx-auto max-w-5xl px-5 py-12 md:py-16">
         <PageMark
           image="/images/mark-path.jpg"

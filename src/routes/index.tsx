@@ -43,8 +43,20 @@ function Home() {
   const addStillness = useSanctuary((s) => s.addStillness);
   const sit = todaysSit();
   return (
-    <main className="bg-bg pb-20">
-      <section className="relative">
+    <main className="relative overflow-hidden bg-bg pb-20">
+      <img
+        src="/images/ornaments/mask.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute right-[-7rem] top-[7rem] z-0 hidden w-72 rotate-[8deg] opacity-[0.09] mix-blend-multiply md:block lg:right-[-3rem] lg:w-96"
+      />
+      <img
+        src="/images/ornaments/crown.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute left-[-4rem] top-[88rem] z-0 hidden w-52 -rotate-[8deg] opacity-[0.11] mix-blend-multiply md:block lg:left-6"
+      />
+      <section className="relative z-10">
         <img
           src="/images/nave.jpg"
           alt=""
@@ -117,7 +129,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto mt-10 max-w-5xl px-5">
+      <section className="relative z-10 mx-auto mt-10 max-w-5xl px-5">
         <div className="grid gap-5 md:grid-cols-[1fr_1fr]">
           <article className="rounded-xl border border-border bg-surface p-6 md:p-8">
             <p className="text-xs tracking-[0.28em] text-gold uppercase">About the experience</p>
@@ -147,7 +159,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto mt-10 max-w-5xl px-5 text-center">
+      <section className="relative z-10 mx-auto mt-10 max-w-5xl px-5 text-center">
         <p className="text-xs tracking-[0.28em] text-gold uppercase">How it works</p>
         <ol className="mt-5 grid gap-3 text-left sm:grid-cols-2 lg:grid-cols-3">
           {[
@@ -166,7 +178,7 @@ function Home() {
         </ol>
       </section>
 
-      <section className="mx-auto mt-8 max-w-3xl px-5">
+      <section className="relative z-10 mx-auto mt-8 max-w-3xl px-5">
         <div className="rounded-2xl border border-gold/30 bg-surface px-5 py-8 md:px-8">
           <p className="text-center text-xs tracking-[0.28em] text-gold uppercase">Today’s sit</p>
           <h2 className="mt-2 text-center font-display text-3xl text-ivory">Six minutes. Then one room.</h2>
@@ -206,7 +218,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto mt-12 max-w-4xl px-5 text-center">
+      <section className="relative z-10 mx-auto mt-12 max-w-4xl px-5 text-center">
         <p className="text-xs tracking-[0.28em] text-gold uppercase">The three parts of this book</p>
         <h2 className="mt-3 font-display text-3xl text-ivory md:text-4xl">Rank restored under Christ</h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted">
