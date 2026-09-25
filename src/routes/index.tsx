@@ -101,16 +101,16 @@ function Home() {
                 </Link>
               )}
               <Link
-                to="/purchase"
+                to="/dashboard"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-gold/60 px-8 text-sm text-ivory hover:border-gold"
               >
-                Purchase Access
+                Open Dashboard
               </Link>
               <Link
                 to="/sign-in"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-border px-8 text-sm text-ivory hover:border-gold"
               >
-                Already a Member? Sign In
+                Sign in to Sync
               </Link>
             </div>
           </div>
@@ -130,18 +130,17 @@ function Home() {
           </article>
           <article className="rounded-xl border border-gold/30 bg-surface p-6 md:p-8">
             <p className="text-xs tracking-[0.28em] text-gold uppercase">Book access</p>
-            <h2 className="mt-3 font-display text-3xl text-ivory">Authenticated and entitlement gated</h2>
+            <h2 className="mt-3 font-display text-3xl text-ivory">Free access for every reader</h2>
             <p className="mt-4 leading-relaxed text-muted">
-              Access requires an account and an active entitlement. Physical book owners can submit a manual
-              verification request for a configurable discount. Pricing is configured in admin settings and environment
-              variables, not hard-coded in the UI.
+              The interactive book is open without purchase. Readers can enter the journey immediately, and signing in
+              remains available for synced progress, journal entries, and account features.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link to="/purchase" className="rounded-full bg-ivory px-5 py-3 text-sm text-bg hover:bg-gold">
-                Access the Experience
+              <Link to="/path" onClick={() => enter()} className="rounded-full bg-ivory px-5 py-3 text-sm text-bg hover:bg-gold">
+                Enter the Experience
               </Link>
               <Link to="/dashboard" className="rounded-full border border-border px-5 py-3 text-sm text-ivory hover:border-gold">
-                Member Dashboard
+                Reader Dashboard
               </Link>
             </div>
           </article>
@@ -152,8 +151,8 @@ function Home() {
         <p className="text-xs tracking-[0.28em] text-gold uppercase">How it works</p>
         <ol className="mt-5 grid gap-3 text-left sm:grid-cols-2 lg:grid-cols-3">
           {[
-            "Purchase or request access",
-            "Sign in securely",
+            "Enter freely",
+            "Sign in to sync",
             "Begin the journey",
             "Complete interactive sections",
             "Autosave your responses",

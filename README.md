@@ -1,6 +1,6 @@
 # THE ORDER Interactive Digital Book Platform
 
-Production-oriented React/TanStack Start application for an authenticated, entitlement-gated interactive version of **THE ORDER**. The app keeps the existing premium reading experience from the supplied workspace and adds database-backed schema, auth, account pages, purchase scaffolding, admin review, progress sync, journal/response persistence, and protected member routes.
+Production-oriented React/TanStack Start application for a free-access interactive version of **THE ORDER**. The app keeps the existing reading experience from the supplied workspace and adds database-backed schema, auth, account pages, purchase scaffolding, admin review, progress sync, journal/response persistence, and reader routes.
 
 ## Installation
 
@@ -102,7 +102,7 @@ Private uploads are represented by secure storage references (`photo_ref`, `file
 - `/purchase`: checkout and book-owner verification request
 - `/dashboard`: resume, progress, quick access
 - `/account`: profile/access state
-- `/experience`: protected member index
+- `/experience`: reader experience index
 - `/experience/how-to-use`: public guide alias
 - `/experience/chambers`, `/experience/assessment`, `/experience/authority`, `/experience/light`, `/experience/prayers`
 - `/experience/journal`, `/experience/pages`, `/experience/glossary`, `/experience/search`, `/experience/downloads`
