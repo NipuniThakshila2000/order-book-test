@@ -75,12 +75,6 @@ function Home() {
         className="ornament pointer-events-none absolute right-[-5rem] top-[53rem] z-0 hidden w-40 rotate-[10deg] opacity-[0.1] mix-blend-multiply md:block lg:right-[3%] lg:w-56"
       />
       <img
-        src="/images/ornaments/heart-mirror.png"
-        alt=""
-        aria-hidden="true"
-        className="ornament pointer-events-none absolute left-[-5rem] top-[66rem] z-0 hidden w-44 -rotate-[9deg] opacity-[0.1] mix-blend-multiply md:block lg:left-[4%] lg:w-60"
-      />
-      <img
         src="/images/ornaments/crown.png"
         alt=""
         aria-hidden="true"
