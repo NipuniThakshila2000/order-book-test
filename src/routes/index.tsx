@@ -48,7 +48,37 @@ function Home() {
         src="/images/ornaments/mask.png"
         alt=""
         aria-hidden="true"
-        className="ornament pointer-events-none absolute right-[-7rem] top-[7rem] z-0 hidden w-72 rotate-[8deg] opacity-[0.09] mix-blend-multiply md:block lg:right-[-3rem] lg:w-96"
+        className="ornament pointer-events-none absolute right-[-7rem] top-[6rem] z-0 hidden w-72 rotate-[8deg] opacity-[0.09] mix-blend-multiply md:block lg:right-[-3rem] lg:w-96"
+      />
+      <img
+        src="/images/ornaments/scroll.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute left-[-6rem] top-[9rem] z-0 hidden w-56 -rotate-[13deg] opacity-[0.08] mix-blend-multiply md:block lg:left-[-2rem] lg:w-72"
+      />
+      <img
+        src="/images/ornaments/lock.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute bottom-auto right-[7%] top-[28rem] z-0 hidden w-28 rotate-[10deg] opacity-[0.12] mix-blend-multiply md:block lg:w-36"
+      />
+      <img
+        src="/images/ornaments/scales.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute left-[9%] top-[31rem] z-0 hidden w-36 -rotate-[5deg] opacity-[0.09] mix-blend-multiply md:block lg:w-44"
+      />
+      <img
+        src="/images/ornaments/sword.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute right-[-5rem] top-[53rem] z-0 hidden w-40 rotate-[10deg] opacity-[0.1] mix-blend-multiply md:block lg:right-[3%] lg:w-56"
+      />
+      <img
+        src="/images/ornaments/heart-mirror.png"
+        alt=""
+        aria-hidden="true"
+        className="ornament pointer-events-none absolute left-[-5rem] top-[66rem] z-0 hidden w-44 -rotate-[9deg] opacity-[0.1] mix-blend-multiply md:block lg:left-[4%] lg:w-60"
       />
       <img
         src="/images/ornaments/crown.png"
