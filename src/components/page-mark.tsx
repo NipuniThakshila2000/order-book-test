@@ -7,7 +7,6 @@ export function PageMark({
   aside,
   children,
   bodyBelow,
-  imageClassName,
 }: {
   image: string;
   kicker: string;
@@ -15,7 +14,6 @@ export function PageMark({
   aside?: ReactNode;
   children?: ReactNode;
   bodyBelow?: boolean;
-  imageClassName?: string;
 }) {
   return (
     <header>
@@ -23,7 +21,7 @@ export function PageMark({
         <img
           src={image}
           alt=""
-          className={`mark-illum h-36 w-full shrink-0 rounded-xl object-cover sm:h-28 sm:w-28 md:h-32 md:w-32 ${imageClassName ?? ""}`}
+          className="mark-illum h-36 w-full shrink-0 rounded-xl object-cover sm:h-28 sm:w-28 md:h-32 md:w-32"
         />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-3">

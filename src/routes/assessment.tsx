@@ -80,12 +80,11 @@ function AssessmentPage() {
   return (
     <main className="page-enter mx-auto max-w-3xl px-5 py-12 md:py-16">
       <PageMark
-        image="/images/book/order-and-rank-p042-55.jpg"
+        image="/images/mark-citadel.jpg"
         kicker="After Part One · from the back of the book"
         title="Assess"
         aside={<PrintRow pageLabel="Print this sitting" />}
         bodyBelow
-        imageClassName="bg-ivory object-contain p-3"
       >
         <p className="font-display text-2xl italic text-gold">Strongholds & Legal Rights Assessment</p>
         <p className="mt-4 text-sm leading-relaxed text-muted">
