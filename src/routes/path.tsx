@@ -23,11 +23,12 @@ function PathPage() {
       <Dust count={18} />
       <div className="page-enter relative mx-auto max-w-5xl px-5 py-12 md:py-16">
         <PageMark
-          image="/images/mark-path.jpg"
+          image="/images/book/from-stronghold-to-freedom-p114-178.jpg"
           kicker="Your walk"
           title="The path"
           aside={<BookPdfLink />}
           bodyBelow
+          imageClassName="bg-ivory object-contain p-3"
         >
           <div className="mt-4 max-w-2xl space-y-4 text-lg leading-relaxed text-muted">
             <p>
@@ -54,12 +55,14 @@ function PathPage() {
 
         <ol className="mt-12 grid gap-4 md:grid-cols-3">
           {[
-            { roman: "I", t: "Chambers", sub: "The Battlefield · Part One", b: "Kirby’s name for this part is the Battlefield. The header link is Chambers. Introduction, then El Mistater, then fifteen chapters, then Deus Revelatus.", img: "/images/mark-watch.jpg" },
-            { roman: "II", t: "Authority", sub: "Part Two", b: "Seven steps. Take back the ground. After Assess, not instead of it. Days on a step is faithfulness.", img: "/images/mark-authority.jpg" },
-            { roman: "III", t: "The Light", sub: "Part Three", b: "Walk it with people. Covering, the prayers, a quiet commissioning. Not a shortcut around the rooms or the steps.", img: "/images/mark-light.jpg" },
+            { roman: "I", t: "Chambers", sub: "The Battlefield · Part One", b: "Kirby’s name for this part is the Battlefield. The header link is Chambers. Introduction, then El Mistater, then fifteen chapters, then Deus Revelatus.", img: "/images/book/order-and-rank-p042-55.jpg" },
+            { roman: "II", t: "Authority", sub: "Part Two", b: "Seven steps. Take back the ground. After Assess, not instead of it. Days on a step is faithfulness.", img: "/images/book/man-of-lawlessness-p161-256.jpg" },
+            { roman: "III", t: "The Light", sub: "Part Three", b: "Walk it with people. Covering, the prayers, a quiet commissioning. Not a shortcut around the rooms or the steps.", img: "/images/book/an-offensive-kingdom-p025-29.jpg" },
           ].map((r) => (
             <li key={r.roman} className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
-              <img src={r.img} alt="" className="h-32 w-full object-cover object-[center_58%]" />
+              <div className="flex h-32 items-center justify-center bg-ivory">
+                <img src={r.img} alt="" className="h-full w-full object-contain p-3" />
+              </div>
               <div className="px-5 py-4">
                 <p className="text-xs tracking-[0.2em] text-gold uppercase">{r.roman} · {r.sub}</p>
                 <h2 className="mt-1 font-display text-2xl text-ivory">{r.t}</h2>
@@ -95,7 +98,9 @@ function PathPage() {
         </ol>
 
         <section className="mt-16 overflow-hidden rounded-xl border border-border bg-surface">
-          <img src="/images/mark-citadel.jpg" alt="" className="h-40 w-full object-cover object-center" />
+          <div className="flex h-40 items-center justify-center bg-ivory">
+            <img src="/images/book/order-and-rank-p042-55.jpg" alt="" className="h-full w-full object-contain p-3" />
+          </div>
           <div className="p-6 md:p-8">
             <p className="text-xs tracking-[0.22em] text-gold uppercase">Between the Battlefield and Authority</p>
             <h2 className="mt-2 font-display text-3xl text-ivory">Assess</h2>
@@ -125,7 +130,9 @@ function PathPage() {
         </ol>
 
         <section className="mt-16 overflow-hidden rounded-xl border border-border bg-surface">
-          <img src="/images/mark-light.jpg" alt="" className="h-40 w-full object-cover object-center" />
+          <div className="flex h-40 items-center justify-center bg-ivory">
+            <img src="/images/book/an-offensive-kingdom-p025-29.jpg" alt="" className="h-full w-full object-contain p-3" />
+          </div>
           <div className="p-6 md:p-8">
             <p className="text-xs tracking-[0.22em] text-gold uppercase">Part Three</p>
             <h2 className="mt-2 font-display text-3xl text-ivory">Walking in the Light</h2>

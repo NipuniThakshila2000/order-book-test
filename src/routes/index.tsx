@@ -15,7 +15,7 @@ const ranks = [
     short: "Chambers",
     line: "Kirby calls this Understanding the Battlefield. In the header it is Chambers. Introduction, then El Mistater (unnumbered), then fifteen chapters as in the book. The Trap of Offense is Chapter 3. Deus Revelatus closes the part.",
     to: "/battlefield" as const,
-    image: "/images/mark-watch.jpg",
+    image: "/images/book/order-and-rank-p042-55.jpg",
   },
   {
     roman: "II",
@@ -24,7 +24,7 @@ const ranks = [
     short: "Authority",
     line: "Take back the ground. Seven steps: identify the curse, reveal the stronghold, confess and repent, submit to Order, judge and reassign, command alignment, testify.",
     to: "/authority" as const,
-    image: "/images/mark-authority.jpg",
+    image: "/images/book/man-of-lawlessness-p161-256.jpg",
   },
   {
     roman: "III",
@@ -33,7 +33,7 @@ const ranks = [
     short: "The Light",
     line: "After the seven steps. Covering, the prayers, a quiet commissioning. Stay with people. Do not walk home alone because the light felt finished.",
     to: "/light" as const,
-    image: "/images/mark-light.jpg",
+    image: "/images/book/an-offensive-kingdom-p025-29.jpg",
   },
 ] as const;
 
@@ -54,9 +54,9 @@ function Home() {
         <div className="relative px-4 pb-4 pt-6 md:pt-8">
           <div className="stagger-in mx-auto w-full max-w-3xl rounded-2xl border border-border bg-surface px-6 py-6 text-center shadow-[0_24px_60px_color-mix(in_oklab,var(--color-fg)_12%,transparent)] md:px-12 md:py-8">
             <img
-              src="/images/crown.jpg"
+              src="/images/book/an-offensive-kingdom-p025-29.jpg"
               alt=""
-              className="seal-breathe mx-auto h-14 w-14 object-contain md:h-20 md:w-20"
+              className="seal-breathe mx-auto h-20 w-28 rounded-lg bg-ivory/90 object-contain p-2 mix-blend-screen md:h-24 md:w-32"
             />
             <p className="mt-2 text-xs tracking-[0.42em] text-gold uppercase">A living sanctuary</p>
             <h1 className="mt-2 font-display text-5xl font-medium tracking-[0.18em] text-ivory md:text-7xl">
@@ -129,12 +129,21 @@ function Home() {
             </p>
           </article>
           <article className="rounded-xl border border-gold/30 bg-surface p-6 md:p-8">
-            <p className="text-xs tracking-[0.28em] text-gold uppercase">Book access</p>
-            <h2 className="mt-3 font-display text-3xl text-ivory">Free access for every reader</h2>
-            <p className="mt-4 leading-relaxed text-muted">
-              The interactive book is open without purchase. Readers can enter the journey immediately, and signing in
-              remains available for synced progress, journal entries, and account features.
-            </p>
+            <div className="flex gap-5">
+              <img
+                src="/images/book/from-stronghold-to-freedom-p114-178.jpg"
+                alt=""
+                className="hidden h-28 w-28 shrink-0 rounded-lg bg-ivory object-contain p-2 sm:block"
+              />
+              <div>
+                <p className="text-xs tracking-[0.28em] text-gold uppercase">Book access</p>
+                <h2 className="mt-3 font-display text-3xl text-ivory">Free access for every reader</h2>
+                <p className="mt-4 leading-relaxed text-muted">
+                  The interactive book is open without purchase. Readers can enter the journey immediately, and signing
+                  in remains available for synced progress, journal entries, and account features.
+                </p>
+              </div>
+            </div>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link to="/path" onClick={() => enter()} className="rounded-full bg-ivory px-5 py-3 text-sm text-bg hover:bg-gold">
                 Enter the Experience
@@ -220,7 +229,9 @@ function Home() {
                 to={r.to}
                 className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface text-left transition-colors hover:border-gold"
               >
-                <img src={r.image} alt="" className="h-36 w-full object-cover object-[center_58%] md:h-40" />
+                <div className="flex h-36 items-center justify-center bg-ivory md:h-40">
+                  <img src={r.image} alt="" className="h-full w-full object-contain p-3" />
+                </div>
                 <div className="flex flex-1 flex-col px-5 py-5">
                   <p className="text-xs tracking-[0.22em] text-gold uppercase">
                     {r.roman} · {r.part}

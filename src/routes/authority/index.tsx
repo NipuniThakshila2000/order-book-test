@@ -18,11 +18,12 @@ function AuthorityIndex() {
       <Dust count={12} />
       <div className="page-enter relative mx-auto max-w-5xl px-5 py-12 md:py-16">
         <PageMark
-          image="/images/mark-authority.jpg"
+          image="/images/book/man-of-lawlessness-p161-256.jpg"
           kicker="Authority · Part Two"
           title="Taking Back Authority"
           aside={<BookPdfLink />}
           bodyBelow
+          imageClassName="bg-ivory object-contain p-3"
         >
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
             The book calls this Taking Back Authority. The link in the header is Authority. Seven steps. Do not skip
