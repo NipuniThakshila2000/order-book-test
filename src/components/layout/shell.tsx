@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useNavigate, useRouterState } from "@tanstack/react-router";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Sparkle } from "lucide-react";
 import { AccessBoundary } from "@/components/access-boundary";
 import { CloudSync } from "@/components/cloud-sync";
 import { ProgressRail } from "@/components/progress-rail";
@@ -66,13 +66,13 @@ export function Shell() {
   return (
     <div className="relative flex min-h-dvh flex-col bg-bg text-fg">
       <WalkGate />
-      <header className="site-chrome sticky top-0 z-40 border-b border-border/60 bg-bg/92 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-6">
-          <Link to="/" className="flex shrink-0 items-center gap-3">
-            <img src="/images/crown.svg" alt="" className="size-8" />
-            <span className="font-display text-xl tracking-[0.28em] text-order-orange">ORDER</span>
+      <header className="site-chrome sticky top-0 z-40 border-b border-border bg-bg">
+        <div className="order-site-nav mx-auto flex max-w-6xl items-center gap-4 px-4 md:px-6">
+          <Link to="/" className="order-brand flex shrink-0 items-center gap-3">
+            <span className="order-brand-flag"><Sparkle size={13} fill="currentColor" /></span>
+            <span className="order-wordmark">ORDER <small>The living sanctuary</small></span>
           </Link>
-          <nav className="ml-auto hidden items-center gap-2 lg:flex">
+          <nav className="order-nav ml-auto hidden items-center gap-2 lg:flex">
             <NavLink to="/dashboard" label="Dashboard" active={pathname.startsWith("/dashboard")} />
             <NavLink to="/path" label="Begin" active={pathname.startsWith("/path")} />
             <MenuGroup label="Journey" items={journey} pathname={pathname} />
@@ -80,6 +80,7 @@ export function Shell() {
             <MenuGroup label="Help" items={help} pathname={pathname} />
             <NavLink to="/account" label="Account" active={pathname.startsWith("/account")} quiet />
           </nav>
+          <Link to="/path" className="order-header-cta hidden lg:inline-flex">Begin the journey</Link>
           <button
             type="button"
             className="ml-auto grid size-11 place-items-center rounded-full border border-border lg:hidden"
@@ -170,8 +171,8 @@ function Footer() {
     <footer className="no-print mt-auto border-t border-gold/25 bg-surface">
       <div className="mx-auto max-w-6xl px-5 py-12 md:px-6 md:py-16">
         <div className="flex flex-col items-center text-center">
-          <img src="/images/crown.svg" alt="" className="h-10 w-10 opacity-90" />
-          <p className="mt-4 font-display text-2xl tracking-[0.32em] text-ivory">ORDER</p>
+          <span className="order-footer-flag"><Sparkle size={13} fill="currentColor" /></span>
+          <p className="mt-4 font-display text-2xl text-ivory">ORDER</p>
           <p className="mt-2 font-display text-lg italic text-gold">{book.subtitle}</p>
         </div>
         <div className="mx-auto mt-8 flex max-w-3xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted">
