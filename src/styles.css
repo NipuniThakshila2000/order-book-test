@@ -157,14 +157,11 @@ html.field-manual textarea {
 /* Editorial layout shared with The Wilderness design. */
 .site-chrome { box-shadow: none; backdrop-filter: none; }
 .order-site-nav { min-height: 76px; }
-.order-brand { position: relative; }
-.order-brand-flag { align-self: flex-start; display: grid; place-items: center; width: 26px; height: 38px; margin-top: -19px; padding-top: 10px; background: var(--color-gold); color: var(--color-bg); clip-path: polygon(0 0,100% 0,100% 100%,50% 80%,0 100%); }
-.order-wordmark { font: 300 20px var(--font-display); white-space: nowrap; }
-.order-wordmark small { margin-left: 5px; color: var(--color-subtle); font: 10px "Geist", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.order-logo { display: block; width: 180px; height: auto; max-height: 61px; object-fit: contain; }
 .order-nav a, .order-nav button { font-size: 12px; }
 .order-header-cta { align-items: center; justify-content: center; min-height: 38px; padding: 8px 19px; border-radius: 999px; background: var(--color-fg); color: var(--color-bg); font-size: 12px; white-space: nowrap; }
 .order-header-cta:hover { background: var(--color-gold); }
-.order-footer-flag { display: grid; place-items: center; width: 28px; height: 40px; padding-top: 7px; background: var(--color-gold); color: var(--color-bg); clip-path: polygon(0 0,100% 0,100% 100%,50% 80%,0 100%); }
+.order-footer-logo { display: block; width: 240px; max-width: 100%; height: auto; }
 .order-home { background: var(--color-bg); }
 .order-field-label { color: var(--color-gold); font: 500 10px/1.4 "Geist Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
 .order-text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--color-gold); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }

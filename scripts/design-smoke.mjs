@@ -6,6 +6,8 @@ for (const viewport of [{ name: "desktop", width: 1280, height: 800 }, { name: "
   const page = await browser.newPage({ viewport });
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto(process.env.DESIGN_SMOKE_URL || "http://127.0.0.1:8080/", { waitUntil: "networkidle" });
+  const logoLoaded = await page.locator("header img.order-logo").evaluate((img) => img.complete && img.naturalWidth > 0);
+  if (!logoLoaded) errors.push(`${viewport.name}: header logo did not load`);
   await page.screenshot({ path: `screenshots/design-${viewport.name}.png`, fullPage: true });
   console.log(viewport.name, await page.title(), await page.locator("h1").first().textContent());
   if (viewport.name === "mobile") {
