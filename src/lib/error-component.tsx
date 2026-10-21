@@ -1,13 +1,14 @@
 import type { ErrorComponentProps } from "@tanstack/react-router";
 
 export function AppErrorComponent({ error, reset }: ErrorComponentProps) {
+  const message = error instanceof Error ? error.message : String(error ?? "");
   return (
     <main className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-6 text-center">
       <p className="font-display text-2xl text-ivory">This page is still gathering.</p>
       <p className="max-w-md text-sm leading-relaxed text-muted">
-        {error.message?.includes("Failed to fetch")
+        {message.includes("Failed to fetch")
           ? "The map did not finish loading. Open it again."
-          : error.message || "Something unexpected happened."}
+          : message || "Something unexpected happened."}
       </p>
       <button
         type="button"
