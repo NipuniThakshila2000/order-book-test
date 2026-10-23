@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 .order-wilderness-feature { display:grid; grid-template-columns:1fr 1fr; max-width:1152px; margin:70px auto; border:1px solid #ddd6ca; border-radius:8px; overflow:hidden; background:#e2e9e5; }
-.order-wilderness-art { height:380px; overflow:hidden; background:#c4cbc7; }
-.order-wilderness-art img { width:100%; height:100%; object-fit:cover; object-position:center 25%; }
+.order-wilderness-art { position:relative; min-height:400px; overflow:hidden; background:#c4cbc7; }
+.order-wilderness-art img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 25%; }
 .order-wilderness-copy { display:flex; align-items:flex-start; justify-content:center; flex-direction:column; padding:clamp(28px,5vw,65px); }
 .order-wilderness-copy h2 { margin-top:12px; font:300 clamp(36px,4vw,54px)/1.05 "Newsreader",Georgia,serif; }
 .order-wilderness-copy p { max-width:440px; margin:15px 0 24px; color:#625d56; font-size:15px; line-height:1.65; }
-@media(max-width:760px) { .order-wilderness-feature { grid-template-columns:1fr; margin:45px 16px; } .order-wilderness-art { height:240px; } }
+@media(max-width:760px) { .order-wilderness-feature { grid-template-columns:1fr; margin:45px 16px; } .order-wilderness-art { min-height:280px; } .order-wilderness-art img { object-position:center top; } }
 
 @theme {
   --color-bg: #f3efe8;
