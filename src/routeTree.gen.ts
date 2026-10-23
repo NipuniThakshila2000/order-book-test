@@ -28,6 +28,7 @@ import { Route as PurchaseRouteImport } from './routes/purchase'
 import { Route as RecordRouteImport } from './routes/record'
 import { Route as SignInRouteImport } from './routes/sign-in'
 import { Route as StillnessRouteImport } from './routes/stillness'
+import { Route as WildernessRouteImport } from './routes/wilderness'
 import { Route as AuthorityIndexRouteImport } from './routes/authority/index'
 import { Route as AuthoritySlugRouteImport } from './routes/authority/$slug'
 import { Route as BattlefieldIndexRouteImport } from './routes/battlefield/index'
@@ -141,6 +142,11 @@ const StillnessRoute = StillnessRouteImport.update({
   path: '/stillness',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WildernessRoute = WildernessRouteImport.update({
+  id: '/wilderness',
+  path: '/wilderness',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthorityIndexRoute = AuthorityIndexRouteImport.update({
   id: '/authority/',
   path: '/authority/',
@@ -247,6 +253,7 @@ export interface FileRoutesByFullPath {
   '/record': typeof RecordRoute
   '/sign-in': typeof SignInRoute
   '/stillness': typeof StillnessRoute
+  '/wilderness': typeof WildernessRoute
   '/authority/$slug': typeof AuthoritySlugRoute
   '/battlefield/$slug': typeof BattlefieldSlugRoute
   '/experience/assessment': typeof ExperienceAssessmentRoute
@@ -285,6 +292,7 @@ export interface FileRoutesByTo {
   '/record': typeof RecordRoute
   '/sign-in': typeof SignInRoute
   '/stillness': typeof StillnessRoute
+  '/wilderness': typeof WildernessRoute
   '/authority/$slug': typeof AuthoritySlugRoute
   '/battlefield/$slug': typeof BattlefieldSlugRoute
   '/experience/assessment': typeof ExperienceAssessmentRoute
@@ -324,6 +332,7 @@ export interface FileRoutesById {
   '/record': typeof RecordRoute
   '/sign-in': typeof SignInRoute
   '/stillness': typeof StillnessRoute
+  '/wilderness': typeof WildernessRoute
   '/authority/$slug': typeof AuthoritySlugRoute
   '/battlefield/$slug': typeof BattlefieldSlugRoute
   '/experience/assessment': typeof ExperienceAssessmentRoute
@@ -364,6 +373,7 @@ export interface FileRouteTypes {
     | '/record'
     | '/sign-in'
     | '/stillness'
+    | '/wilderness'
     | '/authority/$slug'
     | '/battlefield/$slug'
     | '/experience/assessment'
@@ -402,6 +412,7 @@ export interface FileRouteTypes {
     | '/record'
     | '/sign-in'
     | '/stillness'
+    | '/wilderness'
     | '/authority/$slug'
     | '/battlefield/$slug'
     | '/experience/assessment'
@@ -440,6 +451,7 @@ export interface FileRouteTypes {
     | '/record'
     | '/sign-in'
     | '/stillness'
+    | '/wilderness'
     | '/authority/$slug'
     | '/battlefield/$slug'
     | '/experience/assessment'
@@ -479,6 +491,7 @@ export interface RootRouteChildren {
   RecordRoute: typeof RecordRoute
   SignInRoute: typeof SignInRoute
   StillnessRoute: typeof StillnessRoute
+  WildernessRoute: typeof WildernessRoute
   AuthoritySlugRoute: typeof AuthoritySlugRoute
   BattlefieldSlugRoute: typeof BattlefieldSlugRoute
   AuthorityIndexRoute: typeof AuthorityIndexRoute
@@ -618,6 +631,13 @@ declare module '@tanstack/react-router' {
       path: '/stillness'
       fullPath: '/stillness'
       preLoaderRoute: typeof StillnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wilderness': {
+      id: '/wilderness'
+      path: '/wilderness'
+      fullPath: '/wilderness'
+      preLoaderRoute: typeof WildernessRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/authority/': {
@@ -798,6 +818,7 @@ const rootRouteChildren: RootRouteChildren = {
   RecordRoute: RecordRoute,
   SignInRoute: SignInRoute,
   StillnessRoute: StillnessRoute,
+  WildernessRoute: WildernessRoute,
   AuthoritySlugRoute: AuthoritySlugRoute,
   BattlefieldSlugRoute: BattlefieldSlugRoute,
   AuthorityIndexRoute: AuthorityIndexRoute,

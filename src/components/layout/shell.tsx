@@ -17,6 +17,7 @@ const journey = [
   { to: "/battlefield", label: "Read Chambers", hint: "Main book chapters" },
   { to: "/assessment", label: "Assessment", hint: "Answer guided questions" },
   { to: "/authority", label: "Seven Steps", hint: "Authority practice" },
+  { to: "/wilderness", label: "The Wilderness", hint: "Guided court practice" },
   { to: "/light", label: "Walking in the Light", hint: "Final section" },
 ] as const;
 
