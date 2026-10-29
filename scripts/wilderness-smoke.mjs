@@ -8,9 +8,10 @@ try {
     const errors = [];
     page.on("pageerror", error => errors.push(error.message));
     page.on("response", response => { if (response.status() >= 400 && !response.url().endsWith("/api/auth/get-session")) errors.push(`${response.status()} ${response.url()}`); });
-    await page.goto(`${origin}/wilderness`, { waitUntil: "networkidle" });
+    await page.goto(`${origin}/wilderness`, { waitUntil: "domcontentloaded" });
+    await page.waitForTimeout(1000);
     await page.screenshot({ path: `screenshots/wilderness-${viewport.name}.png`, fullPage: true });
-    await page.getByRole("button", { name: /Begin the experience/ }).click();
+    await page.getByRole("button", { name: /Continue to the court/ }).click();
     await page.getByRole("button", { name: /Talk to the Clerk/ }).click();
     await page.getByRole("textbox", { name: "Your response to the Clerk" }).fill("I keep avoiding difficult conversations at work. I want to answer honestly without blaming my colleague.");
     await page.getByRole("button", { name: /Add to conversation/ }).click();
